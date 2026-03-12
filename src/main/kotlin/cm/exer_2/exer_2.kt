@@ -1,15 +1,58 @@
 package org.example.cm.exer_2
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-fun main() {
-    val name = "Kotlin"
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    println("Hello, " + name + "!")
 
-    for (i in 1..5) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        println("i = $i")
+fun lerInputMenu() : Int? {
+    print("""
+     |
+     |-- Indique uma opção: --
+     |1 - Adição
+     |2 - Subtração
+     |3 - Multiplicação
+     |4 - Divisão
+     |
+     |Escolha: 
+    """.trimMargin())
+    val escolha = verificarInputInt()
+    return escolha
+}
+
+fun verificarInputInt() : Int? {
+    try {
+        var input:Int? = -1
+        while (input !in 1..4) {
+            input = readLine()?.toIntOrNull()
+            require(input != null)
+            if (input !in 1..4)
+                println("Introduza um valor entre 1-4.")
+        }
+
+        println("O seu input foi $input")
+        return input
     }
+    catch (e:IllegalArgumentException) {
+        println("O input indicado não é válido. (Erro: $e)")
+        return -1
+    }
+}
+
+fun main() {
+    val numero1: Int = 1
+    val numero2: Int = 0
+    var resultado:Int? = null
+
+    val escolha = lerInputMenu()
+
+    try {
+        when (escolha) {
+            1 -> resultado = numero1 + numero2
+            2 -> resultado = numero1 - numero2
+            3 -> resultado = numero1 * numero2
+            4 -> resultado = numero1 / numero2
+            else -> resultado = null
+        }
+    }
+    catch (e:ArithmeticException) {
+        println("Tentativa a dividir por zero resulta num resultado impossível. (Erro: $e)")
+    }
+    println("Resultado = $resultado")
+    println("Fim do programa.")
 }
