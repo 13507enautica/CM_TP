@@ -17,7 +17,7 @@ fun lerInputMenu() : Int? {
 
 fun verificarInputInt() : Int? {
     try {
-        var input:Int? = -1
+        var input:Int? = null
         while (input !in 1..4) {
             input = readLine()?.toIntOrNull()
             require(input != null)
@@ -34,10 +34,37 @@ fun verificarInputInt() : Int? {
     }
 }
 
+fun verificarInputDouble() : Double? {
+    var input:Double?=null
+    try {
+        input = readLine()?.toDoubleOrNull()
+        require(input != null)
+
+        println("O seu input foi $input")
+        return input
+    }
+    catch (e:IllegalArgumentException) {
+        println("O input indicado não é válido. (Erro: $e)")
+    }
+    return input
+}
+
 fun main() {
-    val numero1: Int = 1
-    val numero2: Int = 0
-    var resultado:Int? = null
+    var numero1: Double? = null
+    var numero2: Double? = null
+    var resultado:Double? = null
+
+    while (numero1==null || numero2==null) {
+        print("""
+     |
+     |Indique o 1º valor: 
+    """.trimMargin())
+        numero1 = verificarInputDouble()
+        print("Indique o 2º valor: ")
+        numero2 = verificarInputDouble()
+        if (numero1==null || numero2==null)
+            println("Um dos seus valores foi inválido.")
+    }
 
     val escolha = lerInputMenu()
 
