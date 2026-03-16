@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Hello World V2</string>
+    <string name="hello_string">Hello Android World!</string>
+    <string name="string_two">My First App</string>
+    <string name="img_description">imagem gato</string>
+</resources>
