@@ -1,12 +1,12 @@
 # Trabalho Prático 1, Tutorial 1 - HelloWorld
 
 
-Tutorial 1 - Hello Kotlin. Hello Mobile Android World!
-Course : Computação Móvel
-Student (s) : Duarte Vale Nº13507
-Date : 13/03/2026
-Repository URL : [Link de repositório](https://github.com/13507enautica/CM_TP1)
----
+Tutorial 1 - Hello Kotlin. Hello Mobile Android World!  
+Course : Computação Móvel  
+Student (s) : Duarte Vale Nº13507  
+Date : 13/03/2026  
+Repository URL : [Link de repositório](https://github.com/13507enautica/CM_TP1)  
+---  
 ## 1. Introdução
 Propósito do trabalho, descrição do trabalho, objetivos
 ## 2. Resumo do Sistema
