@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4b1e065c-4968-4953-9d11-66478b246e0d" name="Changes" comment="refatoração de pasta do primeiro trabalho prático">
+      <change afterPath="$PROJECT_DIR$/../CM_TP2/CM_TP2/src/main/kotlin/cm/exer1_1/exer1_1.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CM_Trabalho1/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CM_Trabalho1/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CM_Trabalho1/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../CM_Trabalho1/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../CM_Trabalho1/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CM_Trabalho1/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CM_Trabalho1/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CM_Trabalho1/.idea/kotlinc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../CM_Trabalho1/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CM_Trabalho1/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../CM_Trabalho1/src/main/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/cm/exer_1/exer_1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../CM_Trabalho1/src/main/kotlin/cm/exer_1/exer_1.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/cm/exer_2/exer_2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../CM_Trabalho1/src/main/kotlin/cm/exer_2/exer_2.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/cm/exer_3/exer_3.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../CM_Trabalho1/src/main/kotlin/cm/exer_3/exer_3.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/cm/virtual_library/virtual_library.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../CM_Trabalho1/src/main/kotlin/cm/virtual_library/virtual_library.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../code/.idea/misc.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;13507enautica&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/13507enautica/CM_TP.git",
+    "accountId": "8183d4e1-176e-4eae-8299-766af4c28f20"
+  }
+}]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="3AtGZsZquaRZGYkwEsIZ147qOgJ" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Kotlin.Exer_1Kt.executor": "Run",
+    "Kotlin.Exer_2Kt.executor": "Run",
+    "Kotlin.Exer_3Kt.executor": "Run",
+    "Kotlin.MainKt.executor": "Run",
+    "Kotlin.Virtual_libraryKt.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/dfvva/Downloads/enidh/2026_CM/CM_Trabalhos",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dfvva\IdeaProjects\CM_Trabalhos\cmtp1" />
+      <recent name="C:\Users\dfvva\IdeaProjects\CM_Trabalhos" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Kotlin.Virtual_libraryKt">
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exer_1Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.cm.exer_1.Exer_1Kt" />
+      <module name="CM_Trabalhos" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exer_2Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.cm.exer_2.Exer_2Kt" />
+      <module name="CM_Trabalhos" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exer_3Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.cm.exer_3.Exer_3Kt" />
+      <module name="CM_Trabalhos" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.MainKt" />
+      <module name="CM_Trabalhos" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Virtual_libraryKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.cm.virtual_library.Virtual_libraryKt" />
+      <module name="CM_Trabalhos" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin.Virtual_libraryKt" />
+        <item itemvalue="Kotlin.Exer_3Kt" />
+        <item itemvalue="Kotlin.Exer_2Kt" />
+        <item itemvalue="Kotlin.Exer_1Kt" />
+        <item itemvalue="Kotlin.MainKt" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.31033.145" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.31033.145" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4b1e065c-4968-4953-9d11-66478b246e0d" name="Changes" comment="" />
+      <created>1773404511510</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1773404511510</updated>
+      <workItem from="1773404514705" duration="672000" />
+      <workItem from="1773593097394" duration="18252000" />
+      <workItem from="1774612947343" duration="708000" />
+    </task>
+    <task id="LOCAL-00001" summary="inicio da reconfiguracao de git para vários trabalhos em vez de um único">
+      <option name="closed" value="true" />
+      <created>1773404997892</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1773404997893</updated>
+    </task>
+    <task id="LOCAL-00002" summary="inicio da reconfiguracao de git para vários trabalhos em vez de um único">
+      <option name="closed" value="true" />
+      <created>1773405068777</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1773405068777</updated>
+    </task>
+    <task id="LOCAL-00003" summary="teste de commit e push de progresso atual">
+      <option name="closed" value="true" />
+      <created>1773593226369</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1773593226370</updated>
+    </task>
+    <task id="LOCAL-00004" summary="implementação do sistema de biblioteca virtual antes de entrega">
+      <option name="closed" value="true" />
+      <created>1773618349401</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1773618349401</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <MESSAGE value="reconfiguracao completa da estrutura de ficheiros para facilitar vários trabalhos" />
+    <MESSAGE value="inicio da reconfiguracao de git para vários trabalhos em vez de um único" />
+    <MESSAGE value="teste de commit e push de progresso atual" />
+    <MESSAGE value="implementação do sistema de biblioteca virtual antes de entrega" />
+    <MESSAGE value="refatoração de pasta do primeiro trabalho prático" />
+    <option name="LAST_COMMIT_MESSAGE" value="refatoração de pasta do primeiro trabalho prático" />
+  </component>
+</project>
