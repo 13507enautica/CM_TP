@@ -7,4 +7,202 @@
     android:layout_height="match_parent"
     android:background="@drawable/weatherapp_bg_land"
     android:theme="@style/Theme.Day.Land"
-    tools:context=".MainActivity" />
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/textSeaLevelLand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="312dp"
+        android:layout_marginBottom="12dp"
+        android:background="@color/purple_700_transparent"
+        android:shadowColor="@color/black"
+        android:shadowRadius="10"
+        android:text="@string/sea_level"
+        app:layout_constraintBottom_toTopOf="@+id/textWindDirLand"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textWindDirLand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="312dp"
+        android:layout_marginBottom="12dp"
+        android:background="@color/purple_700_transparent"
+        android:shadowColor="@color/black"
+        android:shadowRadius="10"
+        android:text="@string/wind_dir"
+        app:layout_constraintBottom_toTopOf="@+id/textWindSpeedLand"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textTimeLand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="312dp"
+        android:layout_marginBottom="40dp"
+        android:background="@color/purple_700_transparent"
+        android:shadowColor="@color/black"
+        android:shadowRadius="10"
+        android:text="@string/text_time"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textTemperatureLand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="312dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/purple_700_transparent"
+        android:shadowColor="@color/black"
+        android:shadowRadius="10"
+        android:text="@string/temperature"
+        app:layout_constraintBottom_toTopOf="@+id/textTimeLand"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textLatitudeLand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:background="@color/purple_700_transparent"
+        android:shadowColor="@color/black"
+        android:shadowRadius="10"
+        android:text="@string/latitude"
+        app:layout_constraintBottom_toTopOf="@+id/textLongitudeLand"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.437"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.166" />
+
+    <TextView
+        android:id="@+id/textLongitudeLand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:background="@color/purple_700_transparent"
+        android:shadowColor="@color/black"
+        android:shadowRadius="10"
+        android:text="@string/longitude"
+        app:layout_constraintBottom_toTopOf="@+id/textSeaLevelLand"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.446"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textWindSpeedLand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="312dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/purple_700_transparent"
+        android:shadowColor="@color/black"
+        android:shadowRadius="10"
+        android:text="@string/wind_speed"
+        app:layout_constraintBottom_toTopOf="@+id/textTemperatureLand"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/resSeaLevelLand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/purple_700_transparent"
+        android:shadowColor="@color/black"
+        android:shadowRadius="10"
+        android:text="@string/sea_level"
+        app:layout_constraintBottom_toTopOf="@+id/resWindDirLand"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textSeaLevelLand" />
+
+    <TextView
+        android:id="@+id/resWindDirLand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:background="@color/purple_700_transparent"
+        android:shadowColor="@color/black"
+        android:shadowRadius="10"
+        android:text="@string/sea_level"
+        app:layout_constraintBottom_toTopOf="@+id/resWindSpeedLand"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.659"
+        app:layout_constraintStart_toEndOf="@+id/textWindDirLand" />
+
+    <TextView
+        android:id="@+id/resWindSpeedLand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:background="@color/purple_700_transparent"
+        android:shadowColor="@color/black"
+        android:shadowRadius="10"
+        android:text="@string/sea_level"
+        app:layout_constraintBottom_toTopOf="@+id/resTemperatureLand"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.69"
+        app:layout_constraintStart_toEndOf="@+id/textWindSpeedLand" />
+
+    <TextView
+        android:id="@+id/resTemperatureLand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@color/purple_700_transparent"
+        android:shadowColor="@color/black"
+        android:shadowRadius="10"
+        android:text="@string/sea_level"
+        app:layout_constraintBottom_toTopOf="@+id/resTimeLand"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.678"
+        app:layout_constraintStart_toEndOf="@+id/textTemperatureLand" />
+
+    <TextView
+        android:id="@+id/resTimeLand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:background="@color/purple_700_transparent"
+        android:shadowColor="@color/black"
+        android:shadowRadius="10"
+        android:text="@string/sea_level"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.758"
+        app:layout_constraintStart_toEndOf="@+id/textTimeLand" />
+
+    <EditText
+        android:id="@+id/editLatitudeLand"
+        android:layout_width="135dp"
+        android:layout_height="48dp"
+        android:height="48dp"
+        android:ems="10"
+        android:hint="@string/latitude"
+        android:inputType="number|numberDecimal|numberSigned"
+        android:text="@string/edit_latitude"
+        app:layout_constraintBottom_toTopOf="@+id/editLongitudeLand"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.661"
+        app:layout_constraintStart_toEndOf="@+id/textLatitudeLand"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/editLongitudeLand"
+        android:layout_width="135dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:height="48dp"
+        android:ems="10"
+        android:hint="@string/hint_longitude"
+        android:inputType="number|numberDecimal|numberSigned"
+        android:text="@string/edit_longitude"
+        app:layout_constraintBottom_toTopOf="@+id/resSeaLevelLand"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.637"
+        app:layout_constraintStart_toEndOf="@+id/textLongitudeLand" />
+</androidx.constraintlayout.widget.ConstraintLayout>
