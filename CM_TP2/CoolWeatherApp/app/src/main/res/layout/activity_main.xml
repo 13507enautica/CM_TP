@@ -9,32 +9,208 @@
     android:theme="@style/Theme.Day"
     tools:context=".MainActivity" >
 
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/bg_panel"
-        android:layout_width="298dp"
-        android:layout_height="592dp"
+    <TextView
+        android:id="@+id/textLatitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="216dp"
         android:background="@color/purple_700_transparent"
-        android:theme="@style/Theme.Day"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:shadowColor="@color/black"
+        android:shadowRadius="10"
+        android:text="@string/latitude"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.124"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/textLatitude"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="20dp"
-            android:text="@string/latitude" />
-    </com.google.android.material.navigation.NavigationView>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textLongitude"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@color/purple_700_transparent"
+        android:shadowColor="@color/black"
+        android:shadowRadius="10"
         android:text="@string/longitude"
-        tools:layout_editor_absoluteX="47dp"
-        tools:layout_editor_absoluteY="97dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textLatitude" />
+
+    <TextView
+        android:id="@+id/textSeaLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="36dp"
+        android:background="@color/purple_700_transparent"
+        android:shadowColor="@color/black"
+        android:shadowRadius="10"
+        android:text="@string/sea_level"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textLongitude" />
+
+    <TextView
+        android:id="@+id/resSeaLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="28dp"
+        android:background="@color/purple_700_transparent"
+        android:shadowColor="@color/black"
+        android:shadowRadius="10"
+        android:text="@string/sea_level"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintStart_toEndOf="@+id/textSeaLevel"
+        app:layout_constraintTop_toBottomOf="@+id/editLongitude" />
+
+    <TextView
+        android:id="@+id/resWindDir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/purple_700_transparent"
+        android:shadowColor="@color/black"
+        android:shadowRadius="10"
+        android:text="@string/sea_level"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textWindDir"
+        app:layout_constraintTop_toBottomOf="@+id/resSeaLevel" />
+
+    <TextView
+        android:id="@+id/resWindSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/purple_700_transparent"
+        android:shadowColor="@color/black"
+        android:shadowRadius="10"
+        android:text="@string/sea_level"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textWindSpeed"
+        app:layout_constraintTop_toBottomOf="@+id/resWindDir" />
+
+    <TextView
+        android:id="@+id/resTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/purple_700_transparent"
+        android:shadowColor="@color/black"
+        android:shadowRadius="10"
+        android:text="@string/sea_level"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textTemperature"
+        app:layout_constraintTop_toBottomOf="@+id/resWindSpeed" />
+
+    <TextView
+        android:id="@+id/resTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/purple_700_transparent"
+        android:shadowColor="@color/black"
+        android:shadowRadius="10"
+        android:text="@string/sea_level"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textTime"
+        app:layout_constraintTop_toBottomOf="@+id/resTemperature"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textWindDir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:background="@color/purple_700_transparent"
+        android:shadowColor="@color/black"
+        android:shadowRadius="10"
+        android:text="@string/wind_dir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.148"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSeaLevel" />
+
+    <TextView
+        android:id="@+id/textWindSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@color/purple_700_transparent"
+        android:shadowColor="@color/black"
+        android:shadowRadius="10"
+        android:text="@string/wind_speed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.137"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textWindDir" />
+
+    <TextView
+        android:id="@+id/textTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:background="@color/purple_700_transparent"
+        android:shadowColor="@color/black"
+        android:shadowRadius="10"
+        android:text="@string/temperature"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.141"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textWindSpeed" />
+
+    <TextView
+        android:id="@+id/textTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:background="@color/purple_700_transparent"
+        android:shadowColor="@color/black"
+        android:shadowRadius="10"
+        android:text="@string/text_time"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.115"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTemperature"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <EditText
+        android:id="@+id/editLatitude"
+        android:layout_width="135dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="204dp"
+        android:height="48dp"
+        android:ems="10"
+        android:inputType="number|numberDecimal|numberSigned"
+        android:text="@string/edit_latitude"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.712"
+        app:layout_constraintStart_toEndOf="@+id/textLatitude"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editLongitude"
+        android:layout_width="135dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:height="48dp"
+        android:ems="10"
+        android:inputType="number|numberDecimal|numberSigned"
+        android:text="@string/edit_longitude"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.679"
+        app:layout_constraintStart_toEndOf="@+id/textLongitude"
+        app:layout_constraintTop_toBottomOf="@+id/editLatitude" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
