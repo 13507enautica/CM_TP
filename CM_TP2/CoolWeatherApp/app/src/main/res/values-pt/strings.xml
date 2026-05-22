@@ -3,8 +3,8 @@
     <string name="app_name">APP de Metereologia Fixe</string>
     <string name="latitude">Latitude:</string>
     <string name="longitude">Longitude:</string>
-    <string name="edit_latitude">Latitude</string>
-    <string name="edit_longitude">Longitude</string>
+    <string name="edit_latitude">0</string>
+    <string name="edit_longitude">0</string>
     <string name="hint_latitude">Especificar latitude (ex.:Latitude 38.69)</string>
     <string name="hint_longitude">Especificar longitude (ex.: -9.29)</string>
     <string name="sea_level">Pressão ao Nível do Mar:</string>
@@ -12,5 +12,5 @@
     <string name="wind_speed">Velocidade de Vento:</string>
     <string name="temperature">Temperatura:</string>
     <string name="text_time">Data e Hora:</string>
-    <string name="upd_button">Atualizar</string>
+    <string name="upd_button">Submeter</string>
 </resources>

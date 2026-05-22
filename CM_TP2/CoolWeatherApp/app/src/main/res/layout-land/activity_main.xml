@@ -5,8 +5,8 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/weatherapp_bg_land"
-    android:theme="@style/Theme.Day.Land"
+    style="@style/Base.Theme.CoolWeatherAPP"
+    android:theme="@style/Base.Theme.CoolWeatherAPP"
     tools:context=".MainActivity" >
 
     <TextView
@@ -19,7 +19,7 @@
         android:shadowColor="@color/black"
         android:shadowRadius="10"
         android:text="@string/sea_level"
-        android:theme="@style/Theme.Day.Land"
+        android:theme="@style/Base.Theme.CoolWeatherAPP"
         app:layout_constraintBottom_toTopOf="@+id/textWindDirLand"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -33,7 +33,7 @@
         android:shadowColor="@color/black"
         android:shadowRadius="10"
         android:text="@string/wind_dir"
-        android:theme="@style/Theme.Day.Land"
+        android:theme="@style/Base.Theme.CoolWeatherAPP"
         app:layout_constraintBottom_toTopOf="@+id/textWindSpeedLand"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -47,7 +47,7 @@
         android:shadowColor="@color/black"
         android:shadowRadius="10"
         android:text="@string/text_time"
-        android:theme="@style/Theme.Day.Land"
+        android:theme="@style/Base.Theme.CoolWeatherAPP"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -61,7 +61,7 @@
         android:shadowColor="@color/black"
         android:shadowRadius="10"
         android:text="@string/temperature"
-        android:theme="@style/Theme.Day.Land"
+        android:theme="@style/Base.Theme.CoolWeatherAPP"
         app:layout_constraintBottom_toTopOf="@+id/textTimeLand"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -74,7 +74,7 @@
         android:shadowColor="@color/black"
         android:shadowRadius="10"
         android:text="@string/latitude"
-        android:theme="@style/Theme.Day.Land"
+        android:theme="@style/Base.Theme.CoolWeatherAPP"
         app:layout_constraintBottom_toTopOf="@+id/textLongitudeLand"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.437"
@@ -91,7 +91,7 @@
         android:shadowColor="@color/black"
         android:shadowRadius="10"
         android:text="@string/longitude"
-        android:theme="@style/Theme.Day.Land"
+        android:theme="@style/Base.Theme.CoolWeatherAPP"
         app:layout_constraintBottom_toTopOf="@+id/textSeaLevelLand"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.446"
@@ -107,7 +107,7 @@
         android:shadowColor="@color/black"
         android:shadowRadius="10"
         android:text="@string/wind_speed"
-        android:theme="@style/Theme.Day.Land"
+        android:theme="@style/Base.Theme.CoolWeatherAPP"
         app:layout_constraintBottom_toTopOf="@+id/textTemperatureLand"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -121,7 +121,7 @@
         android:shadowColor="@color/black"
         android:shadowRadius="10"
         android:text="@string/sea_level"
-        android:theme="@style/Theme.Day.Land"
+        android:theme="@style/Base.Theme.CoolWeatherAPP"
         app:layout_constraintBottom_toTopOf="@+id/resWindDirLand"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -136,7 +136,7 @@
         android:shadowColor="@color/black"
         android:shadowRadius="10"
         android:text="@string/sea_level"
-        android:theme="@style/Theme.Day.Land"
+        android:theme="@style/Base.Theme.CoolWeatherAPP"
         app:layout_constraintBottom_toTopOf="@+id/resWindSpeedLand"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.659"
@@ -151,7 +151,7 @@
         android:shadowColor="@color/black"
         android:shadowRadius="10"
         android:text="@string/sea_level"
-        android:theme="@style/Theme.Day.Land"
+        android:theme="@style/Base.Theme.CoolWeatherAPP"
         app:layout_constraintBottom_toTopOf="@+id/resTemperatureLand"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.69"
@@ -166,7 +166,7 @@
         android:shadowColor="@color/black"
         android:shadowRadius="10"
         android:text="@string/sea_level"
-        android:theme="@style/Theme.Day.Land"
+        android:theme="@style/Base.Theme.CoolWeatherAPP"
         app:layout_constraintBottom_toTopOf="@+id/resTimeLand"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.678"
@@ -181,7 +181,7 @@
         android:shadowColor="@color/black"
         android:shadowRadius="10"
         android:text="@string/sea_level"
-        android:theme="@style/Theme.Day.Land"
+        android:theme="@style/Base.Theme.CoolWeatherAPP"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.758"
@@ -196,7 +196,7 @@
         android:hint="@string/latitude"
         android:inputType="number|numberDecimal|numberSigned"
         android:text="@string/edit_latitude"
-        android:theme="@style/Theme.Day.Land"
+        android:theme="@style/Base.Theme.CoolWeatherAPP"
         app:layout_constraintBottom_toTopOf="@+id/editLongitudeLand"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.661"
@@ -214,7 +214,7 @@
         android:hint="@string/hint_longitude"
         android:inputType="number|numberDecimal|numberSigned"
         android:text="@string/edit_longitude"
-        android:theme="@style/Theme.Day.Land"
+        android:theme="@style/Base.Theme.CoolWeatherAPP"
         app:layout_constraintBottom_toTopOf="@+id/resSeaLevelLand"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.637"

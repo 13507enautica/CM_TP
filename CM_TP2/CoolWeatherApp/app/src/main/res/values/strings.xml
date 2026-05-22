@@ -4,12 +4,12 @@
     <string name="longitude">Longitude:</string>
     <string name="edit_latitude">0</string>
     <string name="edit_longitude">0</string>
-    <string name="hint_latitude">Especificar latitude (ex.:Latitude 38.69)</string>
-    <string name="hint_longitude">Especificar longitude (ex.: -9.29)</string>
+    <string name="hint_latitude">Specify latitude (ex.:Latitude 38.69)</string>
+    <string name="hint_longitude">Specify longitude (ex.: -9.29)</string>
     <string name="sea_level">Sea Level Pressure:</string>
     <string name="wind_dir">Wind Direction:</string>
     <string name="wind_speed">Wind Speed:</string>
     <string name="temperature">Temperature:</string>
     <string name="text_time">Time:</string>
-    <string name="upd_button">Update</string>
+    <string name="upd_button">Submeter</string>
 </resources>
