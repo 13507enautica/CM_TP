@@ -27,6 +27,8 @@ class MainActivity : AppCompatActivity() {
         val submeter: Button = findViewById(R.id.botaoSubmeter)
         val switch: SwitchCompat = findViewById(R.id.switch_nightmode)
 
+        setTheme(R.style.WeatherThemeDay)
+
         // switch
         switch.setOnCheckedChangeListener { button, state ->
             if(state) {

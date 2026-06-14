@@ -227,13 +227,15 @@
         android:track="@drawable/track"
         app:layout_constraintBottom_toTopOf="@+id/textLatitude"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.927"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.492" />
 
     <ImageView
         android:id="@+id/weatherImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         app:layout_constraintBottom_toTopOf="@+id/textLatitude"
         app:layout_constraintEnd_toStartOf="@+id/switch_nightmode"
         app:layout_constraintStart_toStartOf="parent"

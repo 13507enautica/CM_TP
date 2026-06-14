@@ -52,25 +52,17 @@ class Cache<K: Any, V: Any>
 fun main()
 {
 
-    // -------------------------------------------------------
-    // 1. Cache<String, Int> → word frequency counts
-    // -------------------------------------------------------
     val wordCache = Cache<String, Int>()
-
     wordCache.put("kotlin", 3)
     wordCache.put("java", 5)
     wordCache.put("cobol", 2)
 
-    // simulate frequency update using transform
     wordCache.transform("kotlin") { it + 1 }
 
-    // getOrPut usage (existing key)
     val javaCount = wordCache.getOrPut("java") { 0 }
-
-    // getOrPut usage (missing key)
     val scalaCount = wordCache.getOrPut("scala") { 1 }
 
-    println("=== Word Frequency Cache ===")
+    println("-- Word frequency cache -")
     println("kotlin = ${wordCache.get("kotlin")}")
     println("java = $javaCount")
     println("scala = $scalaCount")
@@ -80,51 +72,18 @@ fun main()
     println()
 
 
-    // -------------------------------------------------------
-    // 2. Cache<Int, String> → id-to-name registry
-    // -------------------------------------------------------
-    val userCache = Cache<Int, String>()
-
-    userCache.put(1, "Alice")
-    userCache.put(2, "Bob")
-    userCache.put(3, "Charlie")
-
-    // update value using transform
-    userCache.transform(2) { it.uppercase() }
-
-    // remove entry
-    userCache.evict(3)
-
-    // getOrPut examples
-    val user1 = userCache.getOrPut(1) { "Unknown" }
-    val user4 = userCache.getOrPut(4) { "David" }
-
-    println("=== ID Registry Cache ===")
-    println("1 = $user1")
-    println("2 = ${userCache.get(2)}")
-    println("3 = ${userCache.get(3)}")
-    println("4 = $user4")
-    println("size = ${userCache.size()}")
-    println("snapshot = ${userCache.snapshot()}")
-
-    // -------------------------------------------------------
-    // Word frequency cache
-    // -------------------------------------------------------
-
     wordCache.put("kotlin", 3)
     wordCache.put("java", 0)
     wordCache.put("cobol", 2)
     wordCache.put("scala", -1)
 
-    println("=== Original Cache ===")
+    println("-- Cache antes de filtro --")
     println(wordCache.snapshot())
 
-    // -------------------------------------------------------
-    // Filter values > 0
-    // -------------------------------------------------------
+
     val filtered = wordCache.filterValues { it > 0 }
 
-    println("\n=== Filtered (values > 0) ===")
+    println("\n-- Cache depois de filtro (it>0) --")
     filtered.forEach { (word, count) ->
         println("$word = $count")
     }

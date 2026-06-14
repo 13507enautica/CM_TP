@@ -14,27 +14,21 @@ class Pipeline()
     fun execute(input: List<String>): List<String>
     {
         var newList: List<String> = input
-        println("Starting Pipeline")
 
         functions.forEach {
             newList = it.second(newList)
-            println("${it.first} applied -> ${newList.toString()}")
         }
-
-        println("End of Pipeline")
 
         return newList
     }
 
     fun describe()
     {
-        println("Stages names:")
         functions.forEachIndexed { index, pair ->
             println("\t${index + 1}. ${pair.first}")
         }
     }
 
-    // Challenge :D
     infix fun <T> ((T) -> T).andThen(next: (T) -> T): (T) -> T = { next(this(it)) }
 
     fun compose(firstName: String, secondName: String, newName: String)
@@ -52,7 +46,6 @@ fun buildPipeline(functions: Pipeline.() -> Unit): Pipeline
 {
     val pipeline = Pipeline()
 
-//    pipeline.functions()
     functions.invoke(pipeline)
 
     return pipeline
@@ -73,7 +66,6 @@ fun addIndex(input: List<String>): List<String> = input.mapIndexed { index, stri
 
 fun main() {
 
-    // Original data
     val rawLogs = listOf(
         " INFO : server started ",
         " ERROR : disk full ",
@@ -83,42 +75,40 @@ fun main() {
         " ERROR : connection timeout "
     )
 
-    println("=== RAW INPUT ===")
+    println("Introduzido:")
     rawLogs.forEachIndexed { i, v ->
         println("$i: \"$v\"")
     }
 
-    // Pipeline A: full processing
-    val fullPipeline = buildPipeline {
+    val firstPipeline = buildPipeline {
         addStage("Trim", ::trim)
         addStage("FilterErrors", ::filterErrors)
         addStage("MakeUpper", ::makeUpper)
         addStage("AddIndex", ::addIndex)
     }
 
-    // Pipeline B: lighter debugging pipeline
-    val debugPipeline = buildPipeline {
+    val secondPipeline = buildPipeline {
         addStage("Trim", ::trim)
-        addStage("AddIndex", ::addIndex)
+        addStage("FilterErrors", ::filterErrors)
     }
 
-    println("\n=== PIPELINE A (FULL) ===")
-    val resultA = fullPipeline.execute(rawLogs)
-    resultA.forEach { println(it) }
+    println("\nPipeline 1:")
+    val result1 = firstPipeline.execute(rawLogs)
+    result1.forEach { println(it) }
 
-    println("\n=== PIPELINE B (DEBUG) ===")
-    val resultB = debugPipeline.execute(rawLogs)
-    resultB.forEach { println(it) }
+    println("\nPipeline 2:")
+    val result2 = secondPipeline.execute(rawLogs)
+    result2.forEach { println(it) }
 
-    println("\n=== FORK TEST ===")
-    val (forkA, forkB) = fork(rawLogs, fullPipeline, debugPipeline)
+    println("\n-- Fork de Pipelines --")
+    val (fork1, fork2) = fork(rawLogs, firstPipeline, secondPipeline)
 
-    println("Fork A result:")
-    forkA.forEach { println(it) }
+    println("Resultado Fork 1:")
+    fork1.forEach { println(it) }
 
-    println("\nFork B result:")
-    forkB.forEach { println(it) }
+    println("\nResultado Fork 2:")
+    fork2.forEach { println(it) }
 
-    println("\n=== PIPELINE STAGES (A) ===")
-    fullPipeline.describe()
+    println("\nPipeline Stages:")
+    firstPipeline.describe()
 }
