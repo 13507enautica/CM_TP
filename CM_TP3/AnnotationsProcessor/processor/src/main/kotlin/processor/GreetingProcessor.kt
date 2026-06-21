@@ -1,0 +1,100 @@
+package com.cmtp1.processor
+
+import com.cmtp1.annotations.Greeting
+import com.google.auto.service.AutoService
+import com.squareup.kotlinpoet.*
+import java.io.File
+import javax.annotation.processing.*
+import javax.lang.model.SourceVersion
+import javax.lang.model.element.ExecutableElement
+import javax.lang.model.element.TypeElement
+import javax.tools.Diagnostic
+import kotlin.collections.iterator
+
+@AutoService(Processor::class)
+@SupportedSourceVersion(SourceVersion.RELEASE_21)
+@SupportedAnnotationTypes("com.example.annotations.Greeting")
+class GreetingProcessor : AbstractProcessor() {
+
+    override fun process(
+        annotations: MutableSet<out TypeElement>,
+        roundEnv: RoundEnvironment
+    ): Boolean {
+
+        val classMethodMap = mutableMapOf<TypeElement, MutableList<ExecutableElement>>()
+
+        for (element in roundEnv.getElementsAnnotatedWith(Greeting::class.java)) {
+            if (element is ExecutableElement) {
+                val enclosingClass = element.enclosingElement as TypeElement
+                classMethodMap.computeIfAbsent(enclosingClass) { mutableListOf() }
+                    .add(element)
+            }
+        }
+
+        for ((classElement, methods) in classMethodMap) {
+            generateKotlinWrapperClass(classElement, methods)
+        }
+
+        return true
+    }
+
+    private fun generateKotlinWrapperClass(
+        classElement: TypeElement,
+        methods: List<ExecutableElement>
+    ) {
+        val packageName =
+            processingEnv.elementUtils.getPackageOf(classElement).toString()
+
+        val originalClassName = classElement.simpleName.toString()
+        val wrapperClassName = "${originalClassName}Wrapper"
+
+        val classBuilder = TypeSpec.classBuilder(wrapperClassName)
+            .primaryConstructor(
+                FunSpec.constructorBuilder()
+                    .addParameter("original", ClassName(packageName, originalClassName))
+                    .build()
+            )
+            .addProperty(
+                PropertySpec.builder("original", ClassName(packageName, originalClassName))
+                    .initializer("original")
+                    .build()
+            )
+
+        for (method in methods) {
+            val methodName = method.simpleName.toString()
+
+            val parameters = method.parameters.map {
+                ParameterSpec.builder(it.simpleName.toString(), it.asType().asTypeName()).build()
+            }
+
+            val arguments = method.parameters.joinToString(", ") {
+                it.simpleName.toString()
+            }
+
+            val greetingMessage =
+                method.getAnnotation(Greeting::class.java)?.message ?: "Hello!"
+
+            val methodBuilder = FunSpec.builder(methodName)
+                .addParameters(parameters)
+                .addStatement("println(%S)", greetingMessage)
+                .addStatement("original.$methodName($arguments)")
+
+            classBuilder.addFunction(methodBuilder.build())
+        }
+
+        val file = FileSpec.builder(packageName, wrapperClassName)
+            .addType(classBuilder.build())
+            .build()
+
+        val kaptDir = processingEnv.options["kapt.kotlin.generated"]
+
+        if (kaptDir != null) {
+            file.writeTo(File(kaptDir))
+        } else {
+            processingEnv.messager.printMessage(
+                Diagnostic.Kind.ERROR,
+                "kapt.kotlin.generated not found"
+            )
+        }
+    }
+}
