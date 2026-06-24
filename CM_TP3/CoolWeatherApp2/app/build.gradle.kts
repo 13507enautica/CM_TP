@@ -62,5 +62,9 @@ dependencies {
     implementation(libs.ktor.client.android)
     implementation(libs.ktor.client.content.negotiation)
     implementation(libs.ktor.serialization.kotlinx.json)
+    implementation(libs.kotlinx.serialization.json)
+    implementation(libs.ktor.server.content.negotiation.jvm)
+    implementation(libs.ktor.server.cors.jvm)
+    implementation(libs.ktor.client.okhttp)
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1")
 }
