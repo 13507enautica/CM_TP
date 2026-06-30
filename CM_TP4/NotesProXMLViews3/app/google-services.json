@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "468712786080",
+    "project_id": "noteproxmlviews3",
+    "storage_bucket": "noteproxmlviews3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:468712786080:android:650052fd99f5ade3a921c5",
+        "android_client_info": {
+          "package_name": "com.notes.notesproxmlviews"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCm1yG4q6KLYpzZpsWobeA8lZWqfTLM7u8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
