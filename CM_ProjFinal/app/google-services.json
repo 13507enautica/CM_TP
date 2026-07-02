@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "636343992417",
+    "project_id": "cmprojetofinal",
+    "storage_bucket": "cmprojetofinal.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:636343992417:android:bddb1531bd9925918cea20",
+        "android_client_info": {
+          "package_name": "com.example.adotanos"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoRUBFRmz8Muscbvg0AfYjY5IimAOHgag"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
