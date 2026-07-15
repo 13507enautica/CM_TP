@@ -32,7 +32,7 @@ class WeatherViewModel : ViewModel() {
 
             _uiState.value = _uiState.value.copy(
                 temperature = weather.current_weather.temperature,
-                pressure = weather.hourly.pressure_msl,
+                pressure = weather.hourly.pressure_msl[0],
                 windSpeed = weather.current_weather.windspeed,
                 windDirection = weather.current_weather.winddirection,
                 time = weather.current_weather.time,

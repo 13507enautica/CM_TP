@@ -4,12 +4,17 @@ import android.app.Activity
 import android.content.res.Configuration
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawingPadding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardActions
@@ -17,6 +22,7 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.text.input.TextFieldLineLimits
 import androidx.compose.foundation.text.input.rememberTextFieldState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
@@ -42,6 +48,7 @@ import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -81,23 +88,34 @@ fun PortraitWeatherScreen(weatherUIState: WeatherUiState, onFetchWeather: (Float
     var latGuess by remember(weatherUIState.latitude) { mutableStateOf(if (weatherUIState.latitude == 0f) "" else weatherUIState.latitude.toString()) }
     var longGuess by remember(weatherUIState.longitude) { mutableStateOf(if (weatherUIState.longitude == 0f) "" else weatherUIState.longitude.toString()) }
 
+    
+
     Column(
         modifier = Modifier
-            .padding(8.dp)
+            .padding(8.dp).verticalScroll(rememberScrollState()),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        CoordinatesCard(
-            latGuess = latGuess,
-            longGuess = longGuess,
-            onLatitudeChange = { latGuess = it },
-            onLongitudeChange = { longGuess = it },
-            onFetchWeather = {
-                val latitude = latGuess.toFloatOrNull()
-                val longitude = longGuess.toFloatOrNull()
-                if (latitude != null && longitude != null) {
-                    onFetchWeather(latitude, longitude)
-                }
-            }
-        )
+        Spacer(modifier= Modifier.height(32.dp))
+        Text(text=stringResource(R.string.weather), fontWeight = FontWeight.SemiBold, fontSize = 32.sp)
+        Spacer(modifier= Modifier.height(32.dp))
+        Column(
+            verticalArrangement=Arrangement.Center,
+        ) {
+            CoordinatesCard(
+                latGuess = latGuess,
+                longGuess = longGuess,
+                onLatitudeChange = { latGuess = it },
+                onLongitudeChange = { longGuess = it },
+                onFetchWeather = {
+                    val latitude = latGuess.toFloatOrNull()
+                    val longitude = longGuess.toFloatOrNull()
+                    if (latitude != null && longitude != null) {
+                        onFetchWeather(latitude, longitude)
+                    }
+                },
+            )
+        }
         WeatherCard(
             weatherUIState
         )
@@ -110,10 +128,18 @@ fun LandscapeWeatherScreen(weatherUIState: WeatherUiState, onFetchWeather: (Floa
     var latGuess by remember(weatherUIState.latitude) { mutableStateOf(if (weatherUIState.latitude == 0f) "" else weatherUIState.latitude.toString()) }
     var longGuess by remember(weatherUIState.longitude) { mutableStateOf(if (weatherUIState.longitude == 0f) "" else weatherUIState.longitude.toString()) }
 
-    Column(
+
+
+
+    Row(
         modifier = Modifier
-            .padding(8.dp)
+            .padding(8.dp).horizontalScroll(rememberScrollState()),
+        horizontalArrangement = Arrangement.Center,
+        verticalAlignment = Alignment.CenterVertically,
     ) {
+        Spacer(modifier= Modifier.height(32.dp))
+        Text(text=stringResource(R.string.weather), fontWeight = FontWeight.SemiBold, fontSize = 32.sp)
+        Spacer(modifier= Modifier.height(32.dp))
         CoordinatesCard(
             latGuess = latGuess,
             longGuess = longGuess,
@@ -125,7 +151,7 @@ fun LandscapeWeatherScreen(weatherUIState: WeatherUiState, onFetchWeather: (Floa
                 if (latitude != null && longitude != null) {
                     onFetchWeather(latitude, longitude)
                 }
-            }
+            },
         )
         WeatherCard(
             weatherUIState

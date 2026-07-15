@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CoolWeatherApp2</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="titlecard1">Coordenadas:</string>
+    <string name="titlecard2">Estatísticas:</string>
+    <string name="pressure">Pressão do Nível do Mar:</string>
+    <string name="winddir">Direção Vento:</string>
+    <string name="windspeed">Velocidade Vento:</string>
+    <string name="temperature">Temperatura:</string>
+    <string name="time">Tempo:</string>
+    <string name="update">Atualizar Meteorologia</string>
+    <string name="weather">Meteorologia</string>
+</resources>
