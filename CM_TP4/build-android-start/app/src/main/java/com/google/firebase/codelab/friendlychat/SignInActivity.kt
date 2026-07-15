@@ -29,8 +29,6 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
 import com.google.firebase.codelab.friendlychat.databinding.ActivitySignInBinding
 
-// a1@example.com - Ana Silva - aaa100
-
 class SignInActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySignInBinding
 

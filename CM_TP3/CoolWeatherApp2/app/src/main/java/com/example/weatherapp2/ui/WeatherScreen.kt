@@ -107,7 +107,30 @@ fun PortraitWeatherScreen(weatherUIState: WeatherUiState, onFetchWeather: (Float
 
 @Composable
 fun LandscapeWeatherScreen(weatherUIState: WeatherUiState, onFetchWeather: (Float,Float) -> Unit) {
+    var latGuess by remember(weatherUIState.latitude) { mutableStateOf(if (weatherUIState.latitude == 0f) "" else weatherUIState.latitude.toString()) }
+    var longGuess by remember(weatherUIState.longitude) { mutableStateOf(if (weatherUIState.longitude == 0f) "" else weatherUIState.longitude.toString()) }
 
+    Column(
+        modifier = Modifier
+            .padding(8.dp)
+    ) {
+        CoordinatesCard(
+            latGuess = latGuess,
+            longGuess = longGuess,
+            onLatitudeChange = { latGuess = it },
+            onLongitudeChange = { longGuess = it },
+            onFetchWeather = {
+                val latitude = latGuess.toFloatOrNull()
+                val longitude = longGuess.toFloatOrNull()
+                if (latitude != null && longitude != null) {
+                    onFetchWeather(latitude, longitude)
+                }
+            }
+        )
+        WeatherCard(
+            weatherUIState
+        )
+    }
 }
 
 @Composable
@@ -150,8 +173,6 @@ fun WeatherCard(
 ) {
     Card(
     ) {
-
-
         WeatherRow(stringResource(R.string.pressure),weatherUiState.pressure.toString()+" hPa")
         WeatherRow(stringResource(R.string.winddir),weatherUiState.windDirection.toString()+" º")
         WeatherRow(stringResource(R.string.windspeed),weatherUiState.windSpeed.toString()+" km/h")
@@ -166,7 +187,6 @@ fun WeatherRow(
     text:String,
 ) {
     Row(
-
     ) {
         Text(text = key)
         Text(text = text, textAlign = TextAlign.End)

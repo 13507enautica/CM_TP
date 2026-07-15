@@ -1,5 +1,6 @@
 package com.cmtp1.app
-import com.cmtp1.generated.MyClassWrapper
+
+import com.cmtp1.app.generated.MyClassWrapper
 
 fun main() {
     val myClass = MyClass()
